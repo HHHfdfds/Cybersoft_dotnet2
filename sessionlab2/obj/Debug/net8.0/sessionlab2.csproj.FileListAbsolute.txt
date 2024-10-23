@@ -1,0 +1,15 @@
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\bin\Debug\net8.0\sessionlab2.exe
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\bin\Debug\net8.0\sessionlab2.dll
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.AssemblyInfoInputs.cache
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.AssemblyInfo.cs
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.csproj.CoreCompileInputs.cache
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.sourcelink.json
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.dll
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\refint\sessionlab2.dll
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.pdb
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\bin\Debug\net8.0\sessionlab2.deps.json
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\bin\Debug\net8.0\sessionlab2.runtimeconfig.json
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\bin\Debug\net8.0\sessionlab2.pdb
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\sessionlab2.genruntimeconfig.cache
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\sessionlab2\obj\Debug\net8.0\ref\sessionlab2.dll
