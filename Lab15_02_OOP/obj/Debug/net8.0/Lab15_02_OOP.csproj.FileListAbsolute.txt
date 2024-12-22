@@ -1,0 +1,15 @@
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\bin\Debug\net8.0\Lab15_02_OOP.exe
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\bin\Debug\net8.0\Lab15_02_OOP.deps.json
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\bin\Debug\net8.0\Lab15_02_OOP.runtimeconfig.json
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\bin\Debug\net8.0\Lab15_02_OOP.dll
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\bin\Debug\net8.0\Lab15_02_OOP.pdb
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.AssemblyInfoInputs.cache
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.AssemblyInfo.cs
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.csproj.CoreCompileInputs.cache
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.sourcelink.json
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.dll
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\refint\Lab15_02_OOP.dll
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.pdb
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\Lab15_02_OOP.genruntimeconfig.cache
+C:\Workspace\Dotnet2\Cybersoft_dotnet2\Lab15_02_OOP\obj\Debug\net8.0\ref\Lab15_02_OOP.dll
