@@ -1,0 +1,79 @@
+﻿@page "/register"
+
+<h3>Course Registration Form</h3>
+
+<EditForm Model="@RegistrationForm" OnValidSubmit="HandleValueSubmit">
+    <DataAnnotationsValidator />
+    
+    <div class="mb-3">
+        <label>Full Name *</label>
+        <InputText @bind-Value="RegistrationForm.FullName" class="form-control" placeholder="Enter your full name" />
+        <ValidationMessage For="@(() => RegistrationForm.FullName)" />
+    </div>
+    
+    <div class="mb-3">
+        <label>Email *</label>
+        <InputText @bind-Value="RegistrationForm.Email" class="form-control" type="email" placeholder="Enter your email" />
+        <ValidationMessage For="@(() => RegistrationForm.Email)" />
+    </div>
+    
+    <div class="mb-3">
+        <label>Phone Number *</label>
+        <InputText @bind-Value="RegistrationForm.PhoneNumber" class="form-control" type="tel" placeholder="Enter your phone number" />
+        <ValidationMessage For="@(() => RegistrationForm.PhoneNumber)" />
+    </div>
+    
+    <div class="mb-3">
+        <label>Select Course *</label>
+        <InputSelect @bind-Value="RegistrationForm.SelectedCourse" class="form-control">
+            <option value="">Choose...</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+        </InputSelect>
+        <ValidationMessage For="@(() => RegistrationForm.SelectedCourse)" />
+    </div>
+    
+   <div class="mb-3">
+    <label>Study Mode *</label><br />
+    <InputRadioGroup @bind-Value="RegistrationForm.StudyMode">
+        <InputRadio Value="StudyModeEnum.Online" /> Online
+        <InputRadio Value="StudyModeEnum.Offline" /> Offline
+    </InputRadioGroup>
+    <ValidationMessage For="@(() => RegistrationForm.StudyMode)" />
+</div>
+
+    
+    <div class="mb-3">
+        <label>Preferred Start Date *</label>
+        <InputDate @bind-Value="RegistrationForm.StartDate" class="form-control" />
+        <ValidationMessage For="@(() => RegistrationForm.StartDate)" />
+    </div>
+    
+    <div class="mb-3">
+        <label>Comments or Notes</label>
+        <InputTextArea @bind-Value="RegistrationForm.Comments" class="form-control" placeholder="Enter any additional information" />
+    </div>
+    
+    <div class="mb-3">
+        <InputCheckbox @bind-Value="RegistrationForm.TermsAccepted" />
+        <label class="ms-2">I agree to the terms and conditions *</label>
+        <ValidationMessage For="@(() => RegistrationForm.TermsAccepted)" />
+    </div>
+    
+    <button type="submit" class="btn btn-success">Register</button>
+</EditForm>
+
+@code {
+    private enum StudyModeEnum
+    {
+        Online,
+        Offline
+    }
+    private RegistrationModel RegistrationForm = new RegistrationModel();
+    
+    private void HandleValueSubmit()
+    {
+        System.Diagnostics.Debug.WriteLine("Form Submitted");
+    }
+}
