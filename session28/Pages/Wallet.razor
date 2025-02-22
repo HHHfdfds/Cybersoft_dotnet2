@@ -1,0 +1,189 @@
+﻿@page "/wallet"
+@inject TransactionService TransactionService
+
+<div class="wallet-container">
+    <div class="wallet-card">
+        <h2 class="wallet-title">My Wallet</h2>
+        <h1 class="wallet-balance">$@string.Format("{0:#,0}", TransactionService.Balance)</h1>
+        <p class="wallet-subtitle">Total balance</p>
+        
+        <div class="wallet-buttons">
+            <button class="btn btn-success" @onclick="() => OpenModal(true)">Deposit</button>
+            <button class="btn btn-danger" @onclick="() => OpenModal(false)">Withdraw</button>
+        </div>
+    </div>
+
+    <div class="transaction-card">
+        <h3>Transaction History</h3>
+        <table class="transaction-table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var transaction in TransactionService.Transactions.OrderByDescending(t => t.Date))
+                {
+                    <tr class="@(transaction.Type == "Deposit" ? "deposit-row" : "withdraw-row")">
+                        <td>@transaction.Type</td>
+                        <td>$@string.Format("{0:#,0}", transaction.Amount)</td>
+                        <td>@transaction.Date.ToString("dd MMM hh:mm tt")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (ShowModal)
+{
+    <div class="modal fade show d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@(IsDeposit ? "Deposit Money" : "Withdraw Money")</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" @bind="Amount" class="form-control amount-input" placeholder="Enter amount" />
+                    @if (!string.IsNullOrEmpty(ErrorMessage))
+                    {
+                        <p class="error-message">@ErrorMessage</p>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" @onclick="ProcessTransaction">OK</button>
+                    <button class="btn btn-secondary" @onclick="CloseModal">Close</button>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+@code {
+    private bool ShowModal = false;
+    private bool IsDeposit = true;
+    private decimal Amount;
+    private string ErrorMessage = string.Empty;
+
+    private void OpenModal(bool deposit)
+    {
+        IsDeposit = deposit;
+        ShowModal = true;
+        ErrorMessage = string.Empty;
+        Amount = 0;
+    }
+
+    private void CloseModal()
+    {
+        ShowModal = false;
+        Amount = 0;
+        ErrorMessage = string.Empty;
+    }
+
+    private void ProcessTransaction()
+    {
+        if (Amount <= 0)
+        {
+            ErrorMessage = "Amount must be greater than zero.";
+            return;
+        }
+        if (!IsDeposit && Amount > TransactionService.Balance)
+        {
+            ErrorMessage = "The withdraw amount is greater than the current balance";
+            return;
+        }
+        TransactionService.AddTransaction(IsDeposit ? "Deposit" : "Withdraw", Amount);
+        CloseModal();
+    }
+}
+
+<style>
+    .wallet-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .wallet-card {
+        background: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .wallet-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .wallet-balance {
+        font-size: 36px;
+        color: #ffa500;
+        font-weight: bold;
+    }
+
+    .wallet-subtitle {
+        color: #777;
+        margin-bottom: 15px;
+    }
+
+    .wallet-buttons button {
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    .amount-input {
+        width: 60%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .transaction-card {
+        background: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .transaction-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    .transaction-table th, .transaction-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .transaction-table th {
+        background-color: #f8f9fa;
+    }
+
+    .deposit-row {
+        background-color: #d4edda;
+    }
+
+    .withdraw-row {
+        background-color: #f8d7da;
+    }
+</style>
