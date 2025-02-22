@@ -1,4 +1,5 @@
-﻿@page "/register"
+﻿@using session27.Models
+@page "/register"
 
 <h3>Course Registration Form</h3>
 
@@ -37,9 +38,10 @@
    <div class="mb-3">
     <label>Study Mode *</label><br />
     <InputRadioGroup @bind-Value="RegistrationForm.StudyMode">
-        <InputRadio Value="StudyModeEnum.Online" /> Online
-        <InputRadio Value="StudyModeEnum.Offline" /> Offline
-    </InputRadioGroup>
+    <InputRadio Value="@StudyModeEnum.Online" /> Online
+    <InputRadio Value="@StudyModeEnum.Offline" /> Offline
+</InputRadioGroup>
+
     <ValidationMessage For="@(() => RegistrationForm.StudyMode)" />
 </div>
 
@@ -65,13 +67,7 @@
 </EditForm>
 
 @code {
-    private enum StudyModeEnum
-    {
-        Online,
-        Offline
-    }
     private RegistrationModel RegistrationForm = new RegistrationModel();
-    
     private void HandleValueSubmit()
     {
         System.Diagnostics.Debug.WriteLine("Form Submitted");
