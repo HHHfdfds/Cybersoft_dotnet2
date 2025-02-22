@@ -1,0 +1,63 @@
+﻿@page "/contact"
+
+<h3>Contact Form</h3>
+
+<EditForm Model="@ContactForm" OnValidSubmit="HandleValueSubmit">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label>Full Name:</label>
+        <InputText @bind-Value="ContactForm.FullName" class="form-control" />
+        <ValidationMessage For="@(() => ContactForm.FullName)" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email:</label>
+        <InputText @bind-Value="ContactForm.Email" class="form-control" type="email" />
+        <ValidationMessage For="@(() => ContactForm.Email)" />
+    </div>
+
+    <div class="mb-3">
+        <label>Phone Number:</label>
+        <InputText @bind-Value="ContactForm.PhoneNumber" class="form-control" type="tel" />
+        <ValidationMessage For="@(() => ContactForm.PhoneNumber)" />
+    </div>
+
+    <div class="mb-3">
+        <label>Address:</label>
+        <InputText @bind-Value="ContactForm.Address" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Message:</label>
+        <InputTextArea @bind-Value="ContactForm.Message" class="form-control" />
+        <ValidationMessage For="@(() => ContactForm.Message)" />
+    </div>
+
+    <div class="mb-3">
+        <label>Select Service:</label>
+        <InputSelect @bind-Value="ContactForm.SelectedService" class="form-control">
+            <option value="">-- Select a service --</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Support">Support</option>
+            <option value="Feedback">Feedback</option>
+        </InputSelect>
+        <ValidationMessage For="@(() => ContactForm.SelectedService)" />
+    </div>
+
+    <div class="mb-3">
+        <InputCheckbox @bind-Value="(ContactForm.TermsAccepted)" />
+        <label class="ms-2">I agree to the terms and conditions</label>
+        <ValidationMessage For="@(() => ContactForm.TermsAccepted)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm> 
+
+@code {
+    private ContactModel ContactForm = new ContactModel();
+
+    private void HandleValueSubmit() {
+        System.Diagnostics.Debug.WriteLine("Form Submitted");
+    }
+}
+

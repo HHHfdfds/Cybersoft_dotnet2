@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\obj\\Debug\\net8.0\\compressed\\1pzbymhja2.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\obj\\Debug\\net8.0\\scopedcss\\bundle\\session27.styles.css",
+      "PackagePath": "staticwebassets\\session27.styles.css"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Workspace\\Dotnet2\\Cybersoft_dotnet2\\session27\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.session27.props",
+      "PackagePath": "build\\session27.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.session27.props",
+      "PackagePath": "buildMultiTargeting\\session27.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.session27.props",
+      "PackagePath": "buildTransitive\\session27.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.session27.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
